@@ -56,3 +56,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "slim-rails", "~> 3.3"
+
+gem "graphql", "~> 1.12"
+gem 'graphiql-rails', group: :development
