@@ -56,3 +56,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "slim-rails", "~> 3.3"
+
+gem "tailwindcss-rails", "~> 0.4.1"
