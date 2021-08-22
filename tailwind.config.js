@@ -3,8 +3,8 @@ module.exports = {
   purge: [
     './app/**/*.html.slim',
     './app/helpers/**/*.rb',
-    './app/javascript/**/*.js',
     './app/javascript/**/*.ts',
+    './app/javascript/**/*.tsx',
     './app/javascript/**/*.scss',
   ],
   darkMode: false, // or 'media' or 'class'
