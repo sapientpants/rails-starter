@@ -42,6 +42,10 @@ jobs:
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rails db:reset
+      - name: Scan for Rails vulnerabilities
+        env:
+          RAILS_ENV: test
+        run: bundle exec brakeman -A --color -o /dev/stdout
       - name: Run rspec
         env:
           PGPASSWORD: rails_starter
