@@ -9,6 +9,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_DB: rails_starter
+          POSTGRES_PASSWORD: rails_starter
+          POSTGRES_USER: rails_starter
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     strategy:
       matrix:
         ruby-version: ['3.0']
@@ -22,5 +36,11 @@ jobs:
           bundler-cache: true
       - name: Install javascript dependencies
         run: yarn install
-      - name: Run tests
+      - name: Reset test database
+        env:
+          PGPASSWORD: rails_starter
+          PGUSER: rails_starter
+          RAILS_ENV: test
+        run: bundle exec rails db:reset_test
+      - name: Run specs
         run: bundle exec rake
