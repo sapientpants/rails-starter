@@ -6,14 +6,12 @@
     "@babel/preset-typescript": "^7.15.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
+    "@rails/ujs": "^6.1.4-1",
     "@rails/webpacker": "5.4.2",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
     "autoprefixer": "^9",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "daisyui": "^1.13.0",
@@ -29,7 +27,21 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "@types/rails__activestorage": "^6.0.1",
+    "@types/rails__ujs": "^6.0.1",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/turbolinks": "^5.2.0",
+    "babel-jest": "^27.0.6",
     "fork-ts-checker-webpack-plugin": "^6.3.2",
+    "jest": "^27.0.6",
+    "react-test-renderer": "^17.0.2",
     "webpack-dev-server": "^4.0.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

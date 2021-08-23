@@ -42,9 +42,11 @@ jobs:
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rails db:reset
-      - name: Run specs
+      - name: Run rspec
         env:
           PGPASSWORD: rails_starter
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rake
+      - name: Run jest
+        run: yarn run test

@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
-    "module": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "esnext",
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true,
     "target": "es5",
-    "jsx": "react",
-    "noEmit": true
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "exclude": [
     "**/*.spec.ts",
