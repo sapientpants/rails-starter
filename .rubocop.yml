@@ -1,0 +1,41 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - https://raw.githubusercontent.com/sapientpants/rubocop-config/main/rubocop.yml
+
+
+
+require:
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/*'
+    - db/schema.rb
+    - Guardfile
+    - node_modules/**/*
+  NewCops: enable
+  TargetRubyVersion: 3.0
+
+Layout/ClassStructure:
+  Enabled: true
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - public_class_methods
+    - initializer
+    - instance_methods
+    - protected_methods
+    - private_methods
+
+Style/Documentation:
+  Enabled: false

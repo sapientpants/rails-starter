@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class QueryType < Types::BaseObject
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
@@ -5,7 +7,7 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :todo, TodoType, null: false do
-      description "Find a todo"
+      description 'Find a todo'
       argument :id, ID, required: true
     end
 
@@ -14,7 +16,7 @@ module Types
     end
 
     field :todos, [TodoType], null: false do
-      description "Find all todos"
+      description 'Find all todos'
     end
 
     def todos
