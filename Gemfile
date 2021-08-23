@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -59,3 +60,5 @@ gem "slim-rails", "~> 3.3"
 
 gem "graphql", "~> 1.12"
 gem 'graphiql-rails', group: :development
+
+gem "rexml", "~> 3.2"
