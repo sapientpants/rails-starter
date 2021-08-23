@@ -34,8 +34,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
-      - name: Install javascript dependencies
-        run: yarn install
       - name: Reset test database
         env:
           PGPASSWORD: rails_starter
@@ -48,5 +46,7 @@ jobs:
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rake
+      - name: Install javascript dependencies
+        run: yarn install
       - name: Run jest
         run: yarn run test
