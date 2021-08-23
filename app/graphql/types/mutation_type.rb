@@ -6,7 +6,7 @@ module Types
       argument :done, Boolean, required: false
     end
 
-    def createTodo(name:, done:)
+    def createTodo(name:, done: false)
       Todo.create(name: name, done: done)
     end
   end
