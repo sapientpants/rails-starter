@@ -43,4 +43,8 @@ jobs:
           RAILS_ENV: test
         run: bundle exec rails db:reset
       - name: Run specs
+        env:
+          PGPASSWORD: rails_starter
+          PGUSER: rails_starter
+          RAILS_ENV: test
         run: bundle exec rake
