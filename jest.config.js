@@ -1,6 +1,6 @@
 const config = {
   testMatch: [
-    "**/app/javascript/**/?(*.)+(spec|test).[jt]s?(x)"
+    "**/spec/javascript/**/?(*.)+(spec|test).[jt]s?(x)"
   ],
   verbose: true,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Welcome from './Welcome';
+import Welcome from '../../../app/javascript/packs/Welcome';
 
 it('renders correctly', () => {
   const tree = renderer
