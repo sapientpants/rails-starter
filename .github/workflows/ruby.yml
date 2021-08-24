@@ -54,5 +54,7 @@ jobs:
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rake
+      - name: Lint java/typescript
+        run: yarn eslint app/javascript --ext .js,.jsx,.ts,.tsx
       - name: Run jest
         run: yarn run test
