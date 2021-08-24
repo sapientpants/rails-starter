@@ -84,3 +84,5 @@ gem 'graphiql-rails', group: :development
 gem 'graphql', '~> 1.12'
 
 gem 'rexml', '~> 3.2'
+
+gem "pundit", "~> 2.1"
