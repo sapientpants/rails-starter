@@ -1,7 +1,7 @@
 import React from 'react';
 import Welcome from "./Welcome"
 
-function App() {
+function App(): JSX.Element {
   return (
     <React.StrictMode>
       <Welcome message="Hello, kind user!" />

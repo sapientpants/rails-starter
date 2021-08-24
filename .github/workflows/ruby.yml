@@ -48,13 +48,13 @@ jobs:
         run: bundle exec brakeman -A --color -o /dev/stdout
       - name: Lint Rails code
         run: bundle exec rubocop
-      - name: Run rspec
+      - name: Run Rails specs
         env:
           PGPASSWORD: rails_starter
           PGUSER: rails_starter
           RAILS_ENV: test
         run: bundle exec rake
-      - name: Lint java/typescript
+      - name: Lint javascript/typescript
         run: yarn eslint app/javascript --ext .js,.jsx,.ts,.tsx
-      - name: Run jest
+      - name: Run javascript/typescript specs
         run: yarn run test
