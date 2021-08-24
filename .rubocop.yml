@@ -1,10 +1,5 @@
-inherit_from:
-  - .rubocop_todo.yml
-  - https://raw.githubusercontent.com/sapientpants/rubocop-config/main/rubocop.yml
-
-
-
 require:
+  - rubocop-performance
   - rubocop-rails
   - rubocop-rake
   - rubocop-rspec
@@ -20,6 +15,9 @@ AllCops:
     - node_modules/**/*
   NewCops: enable
   TargetRubyVersion: 3.0
+
+Layout/LineLength:
+  Max: 80
 
 Layout/ClassStructure:
   Enabled: true
